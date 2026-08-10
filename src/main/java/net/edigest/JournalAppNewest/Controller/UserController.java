@@ -1,7 +1,9 @@
 package net.edigest.JournalAppNewest.Controller;
 
+import net.edigest.JournalAppNewest.Api.response.WeatherResponse;
 import net.edigest.JournalAppNewest.Service.JournalEntryService;
 import net.edigest.JournalAppNewest.Service.UserService;
+import net.edigest.JournalAppNewest.Service.WeatherSevice;
 import net.edigest.JournalAppNewest.entity.JournalEntry;
 import net.edigest.JournalAppNewest.entity.User;
 import net.edigest.JournalAppNewest.repo.UserRepo;
@@ -26,6 +28,9 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private WeatherSevice weatherSevice;
 
 
 
@@ -58,5 +63,16 @@ public class UserController {
         userRepo.deleteByUserName(username);
         return new  ResponseEntity<>(HttpStatus.NO_CONTENT);
 
+    }
+
+    @GetMapping
+    public ResponseEntity<?> greeting(){
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        WeatherResponse weatherResponse = weatherSevice.getWeather("Mumbai");
+        String greeting ="";
+        if(weatherResponse!=null){
+            greeting = "Weather feels like" + weatherResponse.getCurrent().getFeelslike();
+        }
+        return new ResponseEntity<>("Hi " + authentication.getName() + " " + greeting , HttpStatus.OK);
     }
 }

@@ -13,3 +13,7 @@ logging:
     net:
       edigest:
         JournalAppNewest: INFO
+
+weather:
+  api:
+    key: 4ccdfeb1ed49cc27798d355807658baf
