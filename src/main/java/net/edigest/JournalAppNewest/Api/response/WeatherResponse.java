@@ -2,7 +2,7 @@ package net.edigest.JournalAppNewest.Api.response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
-import org.springframework.beans.factory.annotation.Autowired;
+
 
 import java.util.ArrayList;
 
