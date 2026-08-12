@@ -22,8 +22,10 @@ spring:
 
 
   redis:
-    host: localhost
-    port: 6379
+    host: suitable-beautiful-head-30637.db.redis.io
+    port: 18961
+    username: default
+    password: f6fYVYviBVWkI3hblWnYYF5ZHJZ1THwc
 
 server:
   port: 9090
@@ -32,7 +34,7 @@ server:
 
 logging:
   level:
-    net:
+     net:
       edigest:
         JournalAppNewest: INFO
 
