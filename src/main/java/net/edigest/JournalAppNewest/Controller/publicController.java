@@ -5,6 +5,7 @@ import net.edigest.JournalAppNewest.Service.UserDetailServiceImpl;
 import net.edigest.JournalAppNewest.Service.UserService;
 
 import net.edigest.JournalAppNewest.entity.User;
+import net.edigest.JournalAppNewest.Utils.JwtUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -34,7 +35,7 @@ public class publicController {
 
 
     @Autowired
-    private net.engineeringdigest.journalApp.utilis.JWTUtils jwtUtils;
+    private JwtUtils jwtUtils;
 
     @PostMapping("/signup")
     public void createUser(@RequestBody User user){

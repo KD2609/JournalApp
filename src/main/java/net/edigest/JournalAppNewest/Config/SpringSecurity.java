@@ -37,7 +37,7 @@ public class SpringSecurity extends WebSecurityConfigurerAdapter {
                 anyRequest().permitAll();
 
        http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and().csrf().disable();
-       http.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
+       http.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
 
     }
 

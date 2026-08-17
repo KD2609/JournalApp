@@ -1,4 +1,4 @@
-package net.engineeringdigest.journalApp.utilis;
+package net.edigest.JournalAppNewest.Utils;
 
 import org.springframework.stereotype.Component;
 import io.jsonwebtoken.Claims;
@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Component
-public class JWTUtils {
+public class JwtUtils {
 
     private String SECRET_KEY = "TaK+HaV^uvCHEFsEVfypW#7g9^k*Z8$V";
 

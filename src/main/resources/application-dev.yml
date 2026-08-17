@@ -8,11 +8,13 @@ spring:
       auto-index-creation: true
 
 
+
+
   mail:
     host: smtp.gmail.com
     port: 587
-    username: dipeshkandpal11@gmail.com
-    password: jema stnl rgso bryc
+    username: chota4885@gmail.com
+    password: puradhlwfzidegvz
     properties:
       mail:
         smtp:
